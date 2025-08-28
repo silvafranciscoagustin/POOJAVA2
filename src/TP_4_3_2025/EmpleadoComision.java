@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class EmpleadoComision extends Empleado{
     private final double porcentajeXVenta = 0.40;
-    private double precioVenta;
     private ArrayList<Venta> ventas;
 
     public EmpleadoComision (double salarioFijo,String nombre){
@@ -27,13 +26,6 @@ public class EmpleadoComision extends Empleado{
         return super.calcularSueldo()+(totalVentas*getPorcentajeXVenta());
     }
 
-    public double getPrecioVenta() {
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
 
     public ArrayList<Venta> getVentas() {
         return new ArrayList<>(ventas);
