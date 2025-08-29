@@ -13,13 +13,13 @@ public class Jardin {
           plantas.add(p);
      }
 
-     public String mostrarPlantas(){
-          if(!plantas.isEmpty()){
-               for (Planta p :plantas) {
-                    p.toString();
-               }
+     public String mostrarTodos() {
+          if (plantas.isEmpty()) return "No hay plantas en el jardín";
+          String resultado = "";
+          for (Planta p : plantas) {
+               resultado += p + "\n--------------------\n"; // toString() se llama automáticamente
           }
-          return "Esta vacio" ;
+          return resultado;
      }
 
      public ArrayList<Planta> getPlantas() {
