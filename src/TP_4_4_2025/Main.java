@@ -22,7 +22,7 @@ public class Main {
         Masajista masajista = new Masajista(false, false, true, "Perez", "Carlos",
                 LocalDate.of(1975, 3, 10), 44556, "Kinesiologo", 15);
 
-        // Agrego todos al contigente
+        // Agrego todos al contigente con el add
         seleccion.addPersona(j1);
         seleccion.addPersona(j2);
         seleccion.addPersona(dt);
