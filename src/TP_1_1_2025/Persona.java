@@ -44,8 +44,10 @@ public class Persona {
         return (calcularIMC()>18.5&&calcularIMC()<25);
     }
 
-    public boolean esElCumple(){
-        return LocalDate.now().equals(getFechaNac());
+    public boolean esElCumple() {
+        LocalDate hoy = LocalDate.now();
+        return hoy.getDayOfMonth() == getFechaNac().getDayOfMonth()
+                && hoy.getMonth() == getFechaNac().getMonth();
     }
 
     public int calcularEdad(){

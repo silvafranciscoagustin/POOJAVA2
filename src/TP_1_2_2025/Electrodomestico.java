@@ -29,6 +29,8 @@ public class Electrodomestico {
         this.peso = 2;
     }
 
+
+
     public Electrodomestico(String nombre){
         this();
         setNombre(nombre);
@@ -55,7 +57,7 @@ public class Electrodomestico {
 
 
     public boolean esBajoConsumo(){
-        return consumoEnergetico<45;
+        return getConsumoEnergetico()<45;
     }
 
     public double getBalance(){
