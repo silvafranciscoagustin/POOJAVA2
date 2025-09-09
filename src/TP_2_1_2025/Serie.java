@@ -19,7 +19,14 @@ public class Serie {
     }
 
 
-    // los metodos de serie son iguales a temporada, es repetir codigo, por eso no lo hicimos xd
+    // los metodos de serie son iguales a temporada, es repetir la misma logica, por eso no lo hicimos
+    public double obtenerPromedioSerie(){
+        double promedioTotal = 0;
+        for (Temporada t: temporadas) {
+            promedioTotal += t.obtenerPromedioCal();
+        }
+        return promedioTotal/temporadas.size();
+    }
 
     public ArrayList<Temporada> getTemporadas() {
         return new ArrayList<>(temporadas);
